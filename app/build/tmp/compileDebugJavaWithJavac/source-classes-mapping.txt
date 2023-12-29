@@ -1,0 +1,18 @@
+com/example/androidbluetoothchat/DeviceListActivity.java
+ com.example.androidbluetoothchat.DeviceListActivity
+ com.example.androidbluetoothchat.DeviceListActivity$1
+ com.example.androidbluetoothchat.DeviceListActivity$2
+ com.example.androidbluetoothchat.DeviceListActivity$3
+com/example/androidbluetoothchat/ChatUtils.java
+ com.example.androidbluetoothchat.ChatUtils
+ com.example.androidbluetoothchat.ChatUtils$AcceptThread
+ com.example.androidbluetoothchat.ChatUtils$ConnectThread
+ com.example.androidbluetoothchat.ChatUtils$ConnectedThread
+com/example/androidbluetoothchat/BuildConfig.java
+ com.example.androidbluetoothchat.BuildConfig
+com/example/androidbluetoothchat/MainActivity.java
+ com.example.androidbluetoothchat.MainActivity
+ com.example.androidbluetoothchat.MainActivity$1
+ com.example.androidbluetoothchat.MainActivity$2
+ com.example.androidbluetoothchat.MainActivity$3
+ com.example.androidbluetoothchat.MainActivity$4
