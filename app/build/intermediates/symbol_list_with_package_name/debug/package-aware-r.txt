@@ -1277,6 +1277,7 @@ color foreground_material_light
 color grey
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color ic_launcher_background
 color m3_appbar_overlay_color
 color m3_assist_chip_icon_tint_color
 color m3_assist_chip_stroke_color
@@ -2623,6 +2624,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btn_select_image
 id btn_send_msg
 id buttonPanel
 id cache_measures
@@ -2742,6 +2744,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id image_received
 id immediateStop
 id included
 id info
@@ -2967,6 +2970,7 @@ id textTop
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
+id text_message
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -4502,6 +4506,7 @@ styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration ifTagNotSet ifTagSet motionInterpolator motionTarget onStateTransition pathMotionArc setsTag transitionDisable upDuration viewTransitionMode
 styleable include constraintSet
+xml file_paths
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end
 xml standalone_badge_gravity_bottom_start

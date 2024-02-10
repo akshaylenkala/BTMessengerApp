@@ -72,6 +72,10 @@
         "source": "com.example.androidbluetoothchat.app-main-26:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
+        "merged": "com.example.androidbluetoothchat.app-merged_res-24:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.androidbluetoothchat.app-main-26:/drawable/ic_launcher_foreground.xml"
+    },
+    {
         "merged": "com.example.androidbluetoothchat.app-merged_res-24:/drawable_plus_foreground.xml.flat",
         "source": "com.example.androidbluetoothchat.app-main-26:/drawable/plus_foreground.xml"
     },
@@ -90,10 +94,6 @@
     {
         "merged": "com.example.androidbluetoothchat.app-merged_res-24:/drawable_blueback.png.flat",
         "source": "com.example.androidbluetoothchat.app-main-26:/drawable/blueback.png"
-    },
-    {
-        "merged": "com.example.androidbluetoothchat.app-merged_res-24:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "com.example.androidbluetoothchat.app-pngs-20:/drawable-anydpi-v24/ic_launcher_foreground.xml"
     },
     {
         "merged": "com.example.androidbluetoothchat.app-merged_res-24:/menu_menu_device_list.xml.flat",
@@ -202,6 +202,10 @@
     {
         "merged": "com.example.androidbluetoothchat.app-merged_res-24:/mipmap-mdpi_send.webp.flat",
         "source": "com.example.androidbluetoothchat.app-main-26:/mipmap-mdpi/send.webp"
+    },
+    {
+        "merged": "com.example.androidbluetoothchat.app-merged_res-24:/xml_file_paths.xml.flat",
+        "source": "com.example.androidbluetoothchat.app-main-26:/xml/file_paths.xml"
     },
     {
         "merged": "com.example.androidbluetoothchat.app-merged_res-24:/mipmap-xxxhdpi_send_round.webp.flat",

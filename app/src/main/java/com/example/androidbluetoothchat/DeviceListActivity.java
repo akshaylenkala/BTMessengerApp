@@ -1,5 +1,4 @@
 package com.example.androidbluetoothchat;
-
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -23,90 +22,75 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Set;
-
 public class DeviceListActivity extends AppCompatActivity {
-
     private ListView listPairedDevices, listAvailableDevices;
     private ProgressBar progressScanDevices;
-
     private ArrayAdapter<String> adapterPairedDevices, adapterAvailableDevices;
     private Context context;
     private BluetoothAdapter bluetoothAdapter;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_device_list);
         context = this;
-
         init();
     }
-
     private void init() {
         listPairedDevices = findViewById(R.id.list_paired_devices);
         listAvailableDevices = findViewById(R.id.list_available_devices);
         progressScanDevices = findViewById(R.id.progress_scan_devices);
-
         adapterPairedDevices = new ArrayAdapter<String>(context, R.layout.device_list_item);
         adapterAvailableDevices = new ArrayAdapter<String>(context, R.layout.device_list_item);
-
         listPairedDevices.setAdapter(adapterPairedDevices);
         listAvailableDevices.setAdapter(adapterAvailableDevices);
-
         listAvailableDevices.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String info = ((TextView) view).getText().toString();
                 String address = info.substring(info.length() - 17);
-
                 Intent intent = new Intent();
                 intent.putExtra("deviceAddress", address);
                 setResult(RESULT_OK, intent);
                 finish();
             }
         });
-
         bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-        Set<BluetoothDevice> pairedDevices = bluetoothAdapter.getBondedDevices();
-
-        if (pairedDevices != null && pairedDevices.size() > 0) {
-            for (BluetoothDevice device : pairedDevices) {
-                adapterPairedDevices.add(device.getName() + "\n" + device.getAddress());
+        try {
+            Set<BluetoothDevice> pairedDevices = bluetoothAdapter.getBondedDevices();
+            if (pairedDevices != null && pairedDevices.size() > 0) {
+                for (BluetoothDevice device : pairedDevices) {
+                    adapterPairedDevices.add(device.getName() + "\n" + device.getAddress());
+                }
             }
         }
-
+        catch(SecurityException e){}
         IntentFilter intentFilter = new IntentFilter(BluetoothDevice.ACTION_FOUND);
         registerReceiver(bluetoothDeviceListener, intentFilter);
         IntentFilter intentFilter1 = new IntentFilter(BluetoothAdapter.ACTION_DISCOVERY_FINISHED);
         registerReceiver(bluetoothDeviceListener, intentFilter1);
-
         listPairedDevices.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                bluetoothAdapter.cancelDiscovery();
-
+                try{
+                bluetoothAdapter.cancelDiscovery();}catch(SecurityException e){}
                 String info = ((TextView) view).getText().toString();
                 String address = info.substring(info.length() - 17);
-
                 Log.d("Address", address);
-
                 Intent intent = new Intent();
                 intent.putExtra("deviceAddress", address);
-
                 setResult(Activity.RESULT_OK, intent);
                 finish();
             }
         });
     }
-
     private BroadcastReceiver bluetoothDeviceListener = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             String action = intent.getAction();
-
+            try{
             if (BluetoothDevice.ACTION_FOUND.equals(action)) {
                 BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
+
                 if (device.getBondState() != BluetoothDevice.BOND_BONDED) {
                     adapterAvailableDevices.add(device.getName() + "\n" + device.getAddress());
                 }
@@ -117,16 +101,14 @@ public class DeviceListActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(context, "Click on the device to start the chat", Toast.LENGTH_SHORT).show();
                 }
-            }
+            }}catch (SecurityException e){}
         }
     };
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_device_list, menu);
         return super.onCreateOptionsMenu(menu);
     }
-
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
@@ -136,26 +118,20 @@ public class DeviceListActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
-
     }
-
     private void scanDevices() {
         progressScanDevices.setVisibility(View.VISIBLE);
         adapterAvailableDevices.clear();
         Toast.makeText(context, "Scan started", Toast.LENGTH_SHORT).show();
-
+        try{
         if (bluetoothAdapter.isDiscovering()) {
             bluetoothAdapter.cancelDiscovery();
         }
-
-        bluetoothAdapter.startDiscovery();
-
+        bluetoothAdapter.startDiscovery();}catch(SecurityException e){}
     }
-
     @Override
     protected void onDestroy() {
         super.onDestroy();
-
         if (bluetoothDeviceListener != null) {
             unregisterReceiver(bluetoothDeviceListener);
         }

@@ -4,7 +4,7 @@
             "outputFile": "com.example.androidbluetoothchat.app-mergeDebugResources-22:/values-w600dp-land-v13/values-w600dp-land-v13.xml",
             "map": [
                 {
-                    "source": "/home/ak/.gradle/caches/transforms-3/d6668efd0a6ff31441bfea7427b6f57d/transformed/material-1.5.0/res/values-w600dp-land-v13/values-w600dp-land-v13.xml",
+                    "source": "/home/ak/.gradle/caches/transforms-3/dbc0b65b84fe1c3a911fb380b17cbfff/transformed/material-1.5.0/res/values-w600dp-land-v13/values-w600dp-land-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

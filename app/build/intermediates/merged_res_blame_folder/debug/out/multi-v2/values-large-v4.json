@@ -4,17 +4,7 @@
             "outputFile": "com.example.androidbluetoothchat.app-mergeDebugResources-22:/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "/home/ak/.gradle/caches/transforms-3/e48179f2e0f327dc8e21bb96db8ee6b3/transformed/appcompat-1.4.1/res/values-large-v4/values-large-v4.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10",
-                        "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,114,185,256,326,396,464,532,636",
-                        "endColumns": "58,70,70,69,69,67,67,103,115",
-                        "endOffsets": "109,180,251,321,391,459,527,631,747"
-                    }
-                },
-                {
-                    "source": "/home/ak/.gradle/caches/transforms-3/d6668efd0a6ff31441bfea7427b6f57d/transformed/material-1.5.0/res/values-large-v4/values-large-v4.xml",
+                    "source": "/home/ak/.gradle/caches/transforms-3/dbc0b65b84fe1c3a911fb380b17cbfff/transformed/material-1.5.0/res/values-large-v4/values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,10",
                         "startColumns": "4,4,4,4",
@@ -30,6 +20,16 @@
                         "endLines": "11,12,18,24",
                         "endColumns": "121,133,10,10",
                         "endOffsets": "869,1003,1444,1887"
+                    }
+                },
+                {
+                    "source": "/home/ak/.gradle/caches/transforms-3/7caa651652104415a53c08941bbd47f7/transformed/appcompat-1.4.1/res/values-large-v4/values-large-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,114,185,256,326,396,464,532,636",
+                        "endColumns": "58,70,70,69,69,67,67,103,115",
+                        "endOffsets": "109,180,251,321,391,459,527,631,747"
                     }
                 }
             ]

@@ -15,6 +15,13 @@
         android:layout_below="@id/tv_text"
         android:layout_marginBottom="60dp"
         tools:ignore="NotSibling" />
+    <ImageView
+        android:id="@+id/image_received"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:visibility="gone"
+        android:layout_margin="10dp"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -33,14 +40,12 @@
             android:layout_marginHorizontal="6dp"
             >
             <ImageButton
-
+                android:id="@+id/btn_select_image"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:background="@drawable/rounded_edittext_background"
                 android:src="@drawable/plus_foreground"
-                android:scaleType="centerCrop"
-
-                />
+                android:scaleType="centerCrop"/>
             <EditText
                 android:id="@+id/ed_enter_message"
                 android:layout_width="307dp"
