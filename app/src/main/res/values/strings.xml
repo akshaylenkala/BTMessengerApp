@@ -1,5 +1,49 @@
+<!-- res/values/guidelines.xml -->
+
 <resources>
     <string name="app_name">Blue-Link</string>
     <string name="str_paired_devices">Paired Devices</string>
     <string name="str_available_devices">Available Devices</string>
+
+    <!-- Guidelines Content -->
+    <string name="guidelines_content">
+    1. <b>Bluetooth Connection:</b>\n
+       - Turn on Bluetooth on your device.\n
+       - Ensure that both devices you want to connect are discoverable.\n
+       - Select the desired device from the list of available devices to establish a connection.\n\n
+
+    2. <b>Sending Messages:</b>\n
+       - Type your message in the text field provided.\n
+       - Press the send button to transmit your message.\n
+       - Ensure that the recipient device is connected to receive the message successfully.\n\n
+
+    3. <b>File Sharing:</b>\n
+       - Tap on the file icon to select a file for sharing.\n
+       - Choose the file you want to share from your device file system.\n
+       - The file will be sent to the connected device once selected.\n\n
+
+    4. <b>Receiving Messages:</b>\n
+       - Messages received from the connected device will appear in the chat interface.\n
+       - You can view the timestamp along with the sender name or device address.\n\n
+
+    5. <b>Notifications:</b>\n
+       - Receive notifications for incoming messages and file transfer requests.\n
+       - Notifications will alert you even when the app is running in the background.\n\n
+
+    6. <b>Data Storage:</b>\n
+       - Files received through the app will be stored in the device default storage location.\n\n
+
+    7. <b>Location Permission:</b>\n
+       - Grant location permission when prompted to enable device discovery and connection.\n\n
+
+    8. <b>Bluetooth Settings:</b>\n
+       - Access Bluetooth settings to manage connections and device visibility.\n\n
+
+    9. <b>Troubleshooting:</b>\n
+       - If you encounter issues with connectivity and try restarting Bluetooth or rebooting the device.\n
+       - Ensure that both devices are within the Bluetooth range for successful communication.\n\n
+
+</string>
+
+
 </resources>

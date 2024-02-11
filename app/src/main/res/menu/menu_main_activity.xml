@@ -13,5 +13,10 @@
         app:showAsAction="always"
         android:icon="@drawable/ic_baseline_bluetooth_24"
         android:title="Switch On Devices" />
+    <item
+        android:id="@+id/action_guidelines"
+        android:icon="@drawable/ic_guidelines"
+        android:title="Guidelines"
+        app:showAsAction="always" />
 
 </menu>

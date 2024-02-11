@@ -22,6 +22,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Set;
+/** @noinspection ALL*/
 public class DeviceListActivity extends AppCompatActivity {
     private ListView listPairedDevices, listAvailableDevices;
     private ProgressBar progressScanDevices;

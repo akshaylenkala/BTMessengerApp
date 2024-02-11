@@ -1,5 +1,4 @@
 package com.example.androidbluetoothchat;
-
 import android.Manifest;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
@@ -10,7 +9,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,7 +16,6 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -26,6 +23,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+/** @noinspection ALL*/
 public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_DEVICE_ADDRESS = "device_address" ;
     private Context context;
@@ -44,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
     public static final int MESSAGE_WRITE = 2;
     public static final int MESSAGE_DEVICE_NAME = 3;
     public static final int MESSAGE_TOAST = 4;
-
     private ImageButton btnSelectImage;
     public static final String DEVICE_NAME = "deviceName";
     public static final String TOAST = "toast";
@@ -128,26 +125,24 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String message = edCreateMessage.getText().toString();
                 if (!message.isEmpty()) {
-                    // If the message is not empty, send it as text
                     edCreateMessage.setText("");
                     chatUtils.write(message.getBytes());
                 } else if (selectedFileUri != null) {
-                    // If a file is selected, send it
                     sendSelectedFile(selectedFileUri);
-                    selectedFileUri = null; // Clear selected file after sending
+                    selectedFileUri = null;
                 } else {
-                    // Handle other cases or show a message
                     Toast.makeText(context, "Please enter a message or select a file", Toast.LENGTH_SHORT).show();
                 }
+
+                int k=listMainChat.getMaxScrollAmount();
+                listMainChat.smoothScrollToPosition(k+13);
             }
         });
     }
     private void openFilePicker() {
         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         intent.addCategory(Intent.CATEGORY_OPENABLE);
-        intent.setType("*/*"); // Set the MIME type to all files
-
-        // Start the file picker
+        intent.setType("*/*");
         startActivityForResult(intent, PICK_FILE_REQUEST_CODE);
     }
     private void initBluetooth() {
@@ -165,9 +160,16 @@ public class MainActivity extends AppCompatActivity {
             case R.id.menu_enable_bluetooth:
                 enableBluetooth();
                 return true;
+            case R.id.action_guidelines:
+                openGuidelinesActivity();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+    private void openGuidelinesActivity() {
+        Intent intent = new Intent(MainActivity.this, GuidelinesActivity.class);
+        startActivity(intent);
     }
     private void checkPermissions() {
         if (ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -181,15 +183,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
         if (requestCode == PICK_FILE_REQUEST_CODE && resultCode == RESULT_OK && data != null) {
-            // Handle file selection
             selectedFileUri = data.getData();
             initiateBluetoothFileTransfer(selectedFileUri);
-            // Trigger the system's built-in sharing dialog
             sendSelectedFile(selectedFileUri);
         } else if (requestCode == SELECT_DEVICE && resultCode == RESULT_OK) {
-            // Handle device selection for Bluetooth connection
             String address = data.getStringExtra("deviceAddress");
             connectedDeviceAddress = address;
             chatUtils.connect(bluetoothAdapter.getRemoteDevice(address));
@@ -198,8 +196,6 @@ public class MainActivity extends AppCompatActivity {
     private void sendSelectedFile(Uri selectedFileUri) {
         if (chatUtils != null && chatUtils.isConnected()) {
         } else {
-            // Queue the file for sending once the connection is established
-            // or show a message indicating that the connection is not yet established.
             Toast.makeText(context, "Not connected or connection not yet established", Toast.LENGTH_SHORT).show();
         }
     }
@@ -208,8 +204,8 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(Intent.ACTION_SEND);
             intent.setType("*/*");
             intent.putExtra(Intent.EXTRA_STREAM, fileUri);
-            intent.setPackage("com.android.bluetooth"); // Package name for Bluetooth sharing app
-            intent.putExtra("android.bluetooth.device.extra.NAME", connectedDevice); // Use custom key with device name
+            intent.setPackage("com.android.bluetooth");
+            intent.putExtra("android.bluetooth.device.extra.NAME", connectedDevice);
             startActivity(intent);
         } else {
             Toast.makeText(this, "Please connect to a device first", Toast.LENGTH_SHORT).show();
@@ -265,8 +261,10 @@ public class MainActivity extends AppCompatActivity {
     private void processReceivedMessage(byte[] buffer, String senderReceiver, String timestamp) {
         String receivedMessage = new String(buffer);
         if (!receivedMessage.equals("<FILE>")) {
-            String formattedMessage = senderReceiver + ": " + receivedMessage+"\n⏲"+timestamp;
+            String formattedMessage = senderReceiver + ": " + receivedMessage+"\n"+timestamp;
             adapterMainChat.add(formattedMessage);
+
         }
+        listMainChat.smoothScrollToPosition(adapterMainChat.getCount() - 1);
     }
 }

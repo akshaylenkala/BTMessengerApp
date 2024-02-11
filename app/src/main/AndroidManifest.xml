@@ -28,16 +28,27 @@
         android:theme="@style/Theme.AndroidBluetoothChat">
         <activity
             android:name=".DeviceListActivity"
+
             android:exported="true" />
         <activity
             android:name=".MainActivity"
+            android:windowSoftInputMode="stateVisible"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".GuidelinesActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.provider"

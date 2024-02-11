@@ -1278,6 +1278,7 @@ color grey
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color ic_launcher_background
+color iconguidelines_background
 color m3_appbar_overlay_color
 color m3_assist_chip_icon_tint_color
 color m3_assist_chip_stroke_color
@@ -2445,7 +2446,6 @@ drawable avd_show_password
 drawable backim
 drawable bg_rounded_input_field
 drawable blueback
-drawable bluebackpat
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -2464,6 +2464,7 @@ drawable ic_baseline_bluetooth_24
 drawable ic_baseline_bluetooth_searching_24
 drawable ic_baseline_person_add
 drawable ic_clock_black_24dp
+drawable ic_guidelines
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -2474,6 +2475,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable iconguidelines_foreground
 drawable m3_appbar_background
 drawable m3_popupmenu_background_overlay
 drawable m3_radiobutton_ripple
@@ -2587,6 +2589,7 @@ id action_bar_title
 id action_container
 id action_context_bar
 id action_divider
+id action_guidelines
 id action_image
 id action_menu_divider
 id action_menu_presenter
@@ -2744,7 +2747,6 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
-id image_received
 id immediateStop
 id included
 id info
@@ -2967,6 +2969,8 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id text_guidelines_content
+id text_guidelines_title
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3103,6 +3107,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_device_list
+layout activity_guidelines
 layout activity_main
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -3245,6 +3250,7 @@ string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string guidelines_content
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description

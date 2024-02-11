@@ -4,7 +4,7 @@
             "outputFile": "com.example.androidbluetoothchat.app-mergeDebugResources-22:/values-v17/values-v17.xml",
             "map": [
                 {
-                    "source": "/home/ak/.gradle/caches/transforms-3/7caa651652104415a53c08941bbd47f7/transformed/appcompat-1.4.1/res/values-v17/values-v17.xml",
+                    "source": "/home/ak/.gradle/caches/transforms-3/b969cc6f2946c6e989cfd1c3bfc81f2c/transformed/appcompat-1.4.1/res/values-v17/values-v17.xml",
                     "from": {
                         "startLines": "2,5,9,12,15,18,22,25,29,33,37,40,43,46,50,53,57",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

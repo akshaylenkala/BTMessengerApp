@@ -15,6 +15,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 import java.util.UUID;
+/** @noinspection ALL*/
 public class ChatUtils {
     private Context context;
     private final Handler handler;
@@ -208,15 +209,10 @@ public class ChatUtils {
         public void run() {
             byte[] buffer = new byte[1024];
             int bytes;
-
-            // Keep listening to the InputStream until an exception occurs
             while (true) {
                 try {
-                    // Read from the InputStream
                     bytes = inputStream.read(buffer);
-
                     String timestamp=getCurrentTimestamp();
-                    // Send the obtained bytes to the UI thread
                     handler.obtainMessage(MainActivity.MESSAGE_READ, bytes, -1, new MessageData(buffer,connectedDevice,timestamp)).sendToTarget();
                 } catch (IOException e) {
                     Log.e("ConnectedThread", "Error reading from InputStream", e);
@@ -232,7 +228,6 @@ public class ChatUtils {
         }
         public void write(byte[] buffer) {
             try {
-                // Write to the connected OutputStream
                 outputStream.write(buffer);
                 handler.obtainMessage(MainActivity.MESSAGE_WRITE, -1, -1, buffer).sendToTarget();
             } catch (IOException e) {

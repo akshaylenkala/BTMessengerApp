@@ -36,6 +36,16 @@
             android:exported="true" />
         <activity
             android:name="com.example.androidbluetoothchat.MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="stateVisible" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.androidbluetoothchat.GuidelinesActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
