@@ -136,7 +136,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String message = edCreateMessage.getText().toString();
                 if (!message.isEmpty()) {
-                    mediaPlayer.start();
+                    if(!connectedDevice.isEmpty())
+                    {mediaPlayer.start();}
                     edCreateMessage.setText("");
                     chatUtils.write(message.getBytes());
                 } else if (selectedFileUri != null) {
@@ -284,12 +285,11 @@ public class MainActivity extends AppCompatActivity {
     }
     private void processReceivedMessage(byte[] buffer, String senderReceiver, String timestamp) {
         String receivedMessage = new String(buffer);
-        if (!receivedMessage.equals("<FILE>")) {
+       if (!receivedMessage.equals("<FILE>")) {
             if(!senderReceiver.equals("Me")){playReceivedMessageSound();}
-            String formattedMessage = senderReceiver + ": " + receivedMessage+"\n"+timestamp;
+            String formattedMessage = senderReceiver + ": "+receivedMessage+"\n"+timestamp;
             adapterMainChat.add(formattedMessage);
-
-        }
+       }
         listMainChat.smoothScrollToPosition(adapterMainChat.getCount() - 1);
     }
     private void playReceivedMessageSound() {
