@@ -1,0 +1,35 @@
+<!-- activity_guidelines.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/text_guidelines_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guidelines"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        tools:ignore="HardcodedText" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/text_guidelines_title"
+        android:layout_marginTop="8dp"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/text_guidelines_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/guidelines_content"
+            android:textSize="16sp"/>
+
+    </ScrollView>
+
+</RelativeLayout>
