@@ -2524,6 +2524,8 @@ drawable rounded_imageview
 drawable send_background
 drawable send_foreground
 drawable starrysky
+drawable starrysky2
+drawable starrysky3
 drawable test_custom_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
@@ -3209,6 +3211,9 @@ mipmap plus_round
 mipmap send
 mipmap send_round
 plurals mtrl_badge_content_description
+raw paired
+raw rec_sound
+raw sent_sound
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

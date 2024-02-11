@@ -2523,6 +2523,8 @@ int drawable rounded_imageview 0x7f0700a2
 int drawable send_background 0x7f0700a3
 int drawable send_foreground 0x7f0700a4
 int drawable starrysky 0x7f0700a5
+int drawable starrysky2 0x7f0700ac
+int drawable starrysky3 0x7f0700ad
 int drawable test_custom_background 0x7f0700a6
 int drawable test_level_drawable 0x7f0700a7
 int drawable tooltip_frame_dark 0x7f0700a8
@@ -3208,6 +3210,9 @@ int mipmap plus_round 0x7f0d0003
 int mipmap send 0x7f0d0004
 int mipmap send_round 0x7f0d0005
 int plurals mtrl_badge_content_description 0x7f0e0000
+int raw paired 0x7f130002
+int raw rec_sound 0x7f130001
+int raw sent_sound 0x7f130000
 int string abc_action_bar_home_description 0x7f0f0000
 int string abc_action_bar_up_description 0x7f0f0001
 int string abc_action_menu_overflow_description 0x7f0f0002

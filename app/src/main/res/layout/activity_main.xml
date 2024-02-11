@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/starrysky">
+    android:background="@drawable/starrysky3">
     <LinearLayout
         android:layout_width="fill_parent"
         android:orientation="horizontal"
@@ -13,6 +13,8 @@
     <ListView
         android:id="@+id/list_conversation"
         android:layout_height="fill_parent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="2dp"
         android:layout_below="@id/tv_text"
         android:layout_width="match_parent"
         android:layout_marginBottom="60dp"

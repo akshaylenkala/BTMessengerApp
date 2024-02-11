@@ -9,140 +9,121 @@
 9        android:targetSdkVersion="31" />
 10
 11    <uses-permission android:name="android.permission.BLUETOOTH" />
-11-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:4:5-68
-11-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:4:22-65
+11-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:3:5-68
+11-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:3:22-65
 12    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-12-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:5:5-74
-12-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:5:22-71
+12-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:4:5-74
+12-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:4:22-71
 13    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-13-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:7:5-79
-13-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:7:22-76
+13-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:5:5-79
+13-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:5:22-76
 14    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-14-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:8:5-81
-14-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:8:22-78
+14-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:6:5-81
+14-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:6:22-78
 15    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
-15-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:9:5-78
-15-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:9:22-75
+15-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:7:5-78
+15-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:7:22-75
 16    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
-16-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:10:5-76
-16-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:10:22-73
-17    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
-17-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:11:5-80
-17-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:11:22-77
-18    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
-18-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:12:5-81
-18-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:12:22-78
-19    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-19-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:13:5-81
-19-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:13:22-78
-20    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-20-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:14:5-79
-20-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:14:22-77
-21    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-21-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:15:5-74
-21-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:15:22-72
-22    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
-22-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:19:5-73
-22-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:19:22-70
-23
-24    <application
-24-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:22:5-61:19
-25        android:allowBackup="true"
-25-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:23:9-35
-26        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-26-->[androidx.core:core:1.7.0] /home/ak/.gradle/caches/transforms-3/044efa5003bafaae5cec776523727751/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
-27        android:debuggable="true"
-28        android:extractNativeLibs="true"
-29        android:icon="@mipmap/ic_launcher"
-29-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:24:9-43
-30        android:label="@string/app_name"
-30-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:25:9-41
-31        android:roundIcon="@mipmap/ic_launcher_round"
-31-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:26:9-54
-32        android:supportsRtl="true"
-32-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:27:9-35
-33        android:theme="@style/Theme.AndroidBluetoothChat" >
-33-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:28:9-58
+16-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:8:5-76
+16-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:8:22-73
+17    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+17-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:9:5-80
+17-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:9:22-77
+18    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+18-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:10:5-74
+18-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:10:22-72
+19    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+19-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:11:5-73
+19-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:11:22-70
+20
+21    <application
+21-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:12:5-44:19
+22        android:allowBackup="true"
+22-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:13:9-35
+23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+23-->[androidx.core:core:1.7.0] /home/ak/.gradle/caches/transforms-3/044efa5003bafaae5cec776523727751/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
+24        android:debuggable="true"
+25        android:extractNativeLibs="true"
+26        android:icon="@mipmap/ic_launcher"
+26-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:14:9-43
+27        android:label="@string/app_name"
+27-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:15:9-41
+28        android:roundIcon="@mipmap/ic_launcher_round"
+28-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:16:9-54
+29        android:supportsRtl="true"
+29-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:17:9-35
+30        android:theme="@style/Theme.AndroidBluetoothChat" >
+30-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:18:9-58
+31        <activity
+31-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:19:9-21:39
+32            android:name="com.example.androidbluetoothchat.DeviceListActivity"
+32-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:20:13-47
+33            android:exported="true" />
+33-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:21:13-36
 34        <activity
-34-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:29:9-32:39
-35            android:name="com.example.androidbluetoothchat.DeviceListActivity"
-35-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:30:13-47
-36            android:exported="true" />
-36-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:32:13-36
-37        <activity
-37-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:33:9-43:20
-38            android:name="com.example.androidbluetoothchat.MainActivity"
-38-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:34:13-41
-39            android:exported="true"
-39-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:36:13-36
-40            android:windowSoftInputMode="stateVisible" >
-40-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:35:13-55
-41            <intent-filter>
-41-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:38:13-42:29
-42                <action android:name="android.intent.action.MAIN" />
-42-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:39:17-69
-42-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:39:25-66
-43
-44                <category android:name="android.intent.category.LAUNCHER" />
-44-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:41:17-77
-44-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:41:27-74
-45            </intent-filter>
-46        </activity>
-47        <activity
-47-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:44:9-50:20
-48            android:name="com.example.androidbluetoothchat.GuidelinesActivity"
-48-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:44:19-53
-49            android:exported="true" >
-49-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:45:13-36
-50            <intent-filter>
-50-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:38:13-42:29
-51                <action android:name="android.intent.action.MAIN" />
-51-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:39:17-69
-51-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:39:25-66
-52
-53                <category android:name="android.intent.category.LAUNCHER" />
-53-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:41:17-77
-53-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:41:27-74
-54            </intent-filter>
-55        </activity>
-56
-57        <provider
-58            android:name="androidx.core.content.FileProvider"
-58-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:53:13-62
-59            android:authorities="com.example.androidbluetoothchat.provider"
-59-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:54:13-60
-60            android:exported="false"
-60-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:55:13-37
-61            android:grantUriPermissions="true" >
-61-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:56:13-47
+34-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:22:9-30:20
+35            android:name="com.example.androidbluetoothchat.MainActivity"
+35-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:23:13-41
+36            android:exported="true"
+36-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:25:13-36
+37            android:windowSoftInputMode="stateVisible" >
+37-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:24:13-55
+38            <intent-filter>
+38-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:26:13-29:29
+39                <action android:name="android.intent.action.MAIN" />
+39-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:27:17-69
+39-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:27:25-66
+40
+41                <category android:name="android.intent.category.LAUNCHER" />
+41-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:28:17-77
+41-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:28:27-74
+42            </intent-filter>
+43        </activity>
+44        <activity
+44-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:31:9-34:20
+45            android:name="com.example.androidbluetoothchat.GuidelinesActivity"
+45-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:32:13-47
+46            android:exported="true" >
+46-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:33:13-36
+47        </activity>
+48
+49        <provider
+50            android:name="androidx.core.content.FileProvider"
+50-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:36:13-62
+51            android:authorities="com.example.androidbluetoothchat.provider"
+51-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:37:13-60
+52            android:exported="false"
+52-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:38:13-37
+53            android:grantUriPermissions="true" >
+53-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:39:13-47
+54            <meta-data
+54-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:40:13-42:54
+55                android:name="android.support.FILE_PROVIDER_PATHS"
+55-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:41:17-67
+56                android:resource="@xml/file_paths" />
+56-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:42:17-51
+57        </provider>
+58        <provider
+58-->[androidx.emoji2:emoji2:1.0.0] /home/ak/.gradle/caches/transforms-3/0dcf03e74da7158d242290bce3a9f5df/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+59            android:name="androidx.startup.InitializationProvider"
+59-->[androidx.emoji2:emoji2:1.0.0] /home/ak/.gradle/caches/transforms-3/0dcf03e74da7158d242290bce3a9f5df/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
+60            android:authorities="com.example.androidbluetoothchat.androidx-startup"
+60-->[androidx.emoji2:emoji2:1.0.0] /home/ak/.gradle/caches/transforms-3/0dcf03e74da7158d242290bce3a9f5df/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
+61            android:exported="false" >
+61-->[androidx.emoji2:emoji2:1.0.0] /home/ak/.gradle/caches/transforms-3/0dcf03e74da7158d242290bce3a9f5df/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
 62            <meta-data
-62-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:57:13-59:54
-63                android:name="android.support.FILE_PROVIDER_PATHS"
-63-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:58:17-67
-64                android:resource="@xml/file_paths" />
-64-->/mnt/chromeos/MyFiles/Downloads/Feb9/Project/app/src/main/AndroidManifest.xml:59:17-51
-65        </provider>
-66        <provider
-66-->[androidx.emoji2:emoji2:1.0.0] /home/ak/.gradle/caches/transforms-3/0dcf03e74da7158d242290bce3a9f5df/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
-67            android:name="androidx.startup.InitializationProvider"
-67-->[androidx.emoji2:emoji2:1.0.0] /home/ak/.gradle/caches/transforms-3/0dcf03e74da7158d242290bce3a9f5df/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
-68            android:authorities="com.example.androidbluetoothchat.androidx-startup"
-68-->[androidx.emoji2:emoji2:1.0.0] /home/ak/.gradle/caches/transforms-3/0dcf03e74da7158d242290bce3a9f5df/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
-69            android:exported="false" >
-69-->[androidx.emoji2:emoji2:1.0.0] /home/ak/.gradle/caches/transforms-3/0dcf03e74da7158d242290bce3a9f5df/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
-70            <meta-data
-70-->[androidx.emoji2:emoji2:1.0.0] /home/ak/.gradle/caches/transforms-3/0dcf03e74da7158d242290bce3a9f5df/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
-71                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-71-->[androidx.emoji2:emoji2:1.0.0] /home/ak/.gradle/caches/transforms-3/0dcf03e74da7158d242290bce3a9f5df/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
-72                android:value="androidx.startup" />
-72-->[androidx.emoji2:emoji2:1.0.0] /home/ak/.gradle/caches/transforms-3/0dcf03e74da7158d242290bce3a9f5df/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
-73            <meta-data
-73-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/ak/.gradle/caches/transforms-3/546b46393ddf5a34b59076622c072569/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
-74                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-74-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/ak/.gradle/caches/transforms-3/546b46393ddf5a34b59076622c072569/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
-75                android:value="androidx.startup" />
-75-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/ak/.gradle/caches/transforms-3/546b46393ddf5a34b59076622c072569/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
-76        </provider>
-77    </application>
-78
-79</manifest>
+62-->[androidx.emoji2:emoji2:1.0.0] /home/ak/.gradle/caches/transforms-3/0dcf03e74da7158d242290bce3a9f5df/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+63                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+63-->[androidx.emoji2:emoji2:1.0.0] /home/ak/.gradle/caches/transforms-3/0dcf03e74da7158d242290bce3a9f5df/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
+64                android:value="androidx.startup" />
+64-->[androidx.emoji2:emoji2:1.0.0] /home/ak/.gradle/caches/transforms-3/0dcf03e74da7158d242290bce3a9f5df/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
+65            <meta-data
+65-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/ak/.gradle/caches/transforms-3/546b46393ddf5a34b59076622c072569/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+66                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+66-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/ak/.gradle/caches/transforms-3/546b46393ddf5a34b59076622c072569/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+67                android:value="androidx.startup" />
+67-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/ak/.gradle/caches/transforms-3/546b46393ddf5a34b59076622c072569/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+68        </provider>
+69    </application>
+70
+71</manifest>

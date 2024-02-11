@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -23,6 +24,9 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+
+import java.io.IOException;
+
 /** @noinspection ALL*/
 public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_DEVICE_ADDRESS = "device_address" ;
@@ -47,6 +51,9 @@ public class MainActivity extends AppCompatActivity {
     public static final String TOAST = "toast";
     private String connectedDevice;
     private String connectedDeviceAddress;
+    private MediaPlayer mediaPlayer;
+    private MediaPlayer rmediaplayer;
+    private MediaPlayer pairedsound;
     private Handler handler = new Handler(new Handler.Callback() {
         @Override
         public boolean handleMessage(Message message) {
@@ -71,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
                             break;
                         case ChatUtils.STATE_CONNECTED:
                             setState("Connected: " + connectedDevice);
+                            playDeviceConnectedSound();
                             break;
                     }
                     break;
@@ -97,6 +105,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mediaPlayer = MediaPlayer.create(this, R.raw.sent_sound);
+        rmediaplayer = MediaPlayer.create(this, R.raw.rec_sound);
+        pairedsound = MediaPlayer.create(this, R.raw.paired);
         context = this;
         init();
         initBluetooth();
@@ -125,6 +136,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String message = edCreateMessage.getText().toString();
                 if (!message.isEmpty()) {
+                    mediaPlayer.start();
                     edCreateMessage.setText("");
                     chatUtils.write(message.getBytes());
                 } else if (selectedFileUri != null) {
@@ -257,14 +269,49 @@ public class MainActivity extends AppCompatActivity {
         if (chatUtils != null) {
             chatUtils.stop();
         }
+        if (mediaPlayer != null) {
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
+        if (rmediaplayer != null) {
+            rmediaplayer.release();
+            rmediaplayer = null;
+        }
+        if (pairedsound != null) {
+            pairedsound.release();
+            pairedsound = null;
+        }
     }
     private void processReceivedMessage(byte[] buffer, String senderReceiver, String timestamp) {
         String receivedMessage = new String(buffer);
         if (!receivedMessage.equals("<FILE>")) {
+            if(!senderReceiver.equals("Me")){playReceivedMessageSound();}
             String formattedMessage = senderReceiver + ": " + receivedMessage+"\n"+timestamp;
             adapterMainChat.add(formattedMessage);
 
         }
         listMainChat.smoothScrollToPosition(adapterMainChat.getCount() - 1);
     }
+    private void playReceivedMessageSound() {
+        if (rmediaplayer != null) {
+            try {
+                rmediaplayer.stop();
+                rmediaplayer.prepare(); // Prepare MediaPlayer for playback (reset state)
+                rmediaplayer.start(); // Start playback
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    private void playDeviceConnectedSound() {
+        if (pairedsound != null) {
+            try {
+                pairedsound.stop();
+                pairedsound.prepare(); // Prepare MediaPlayer for playback (reset state)
+                pairedsound.start(); // Start playback
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+}
 }
