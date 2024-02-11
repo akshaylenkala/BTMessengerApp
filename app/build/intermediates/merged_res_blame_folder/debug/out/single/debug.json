@@ -8,12 +8,20 @@
         "source": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-main-26:/drawable/send_foreground.xml"
     },
     {
+        "merged": "com.example.androidbluetoothchat.app-merged_res-24:/layout_message_layout.xml.flat",
+        "source": "com.example.androidbluetoothchat.app-main-26:/layout/message_layout.xml"
+    },
+    {
         "merged": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-merged_res-24:/drawable_blueback.png.flat",
         "source": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-main-26:/drawable/blueback.png"
     },
     {
         "merged": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-merged_res-24:/drawable_rounded_imageview.xml.flat",
         "source": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-main-26:/drawable/rounded_imageview.xml"
+    },
+    {
+        "merged": "com.example.androidbluetoothchat.app-merged_res-24:/layout_activity_main.xml.flat",
+        "source": "com.example.androidbluetoothchat.app-main-26:/layout/activity_main.xml"
     },
     {
         "merged": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-merged_res-24:/drawable_plus_foreground.xml.flat",
@@ -46,6 +54,10 @@
     {
         "merged": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-merged_res-24:/mipmap-xhdpi_send.webp.flat",
         "source": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-main-26:/mipmap-xhdpi/send.webp"
+    },
+    {
+        "merged": "com.example.androidbluetoothchat.app-merged_res-24:/layout_activity_device_list.xml.flat",
+        "source": "com.example.androidbluetoothchat.app-main-26:/layout/activity_device_list.xml"
     },
     {
         "merged": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-merged_res-24:/mipmap-hdpi_send_round.webp.flat",
@@ -152,6 +164,10 @@
         "source": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-main-26:/mipmap-hdpi/plus.webp"
     },
     {
+        "merged": "com.example.androidbluetoothchat.app-merged_res-24:/layout_device_list_item.xml.flat",
+        "source": "com.example.androidbluetoothchat.app-main-26:/layout/device_list_item.xml"
+    },
+    {
         "merged": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-merged_res-24:/mipmap-xxhdpi_plus_round.webp.flat",
         "source": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-main-26:/mipmap-xxhdpi/plus_round.webp"
     },
@@ -202,10 +218,6 @@
     {
         "merged": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-merged_res-24:/drawable-v24_bg_rounded_input_field.xml.flat",
         "source": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-main-26:/drawable-v24/bg_rounded_input_field.xml"
-    },
-    {
-        "merged": "com.example.androidbluetoothchat.app-merged_res-24:/layout_activity_guidelines.xml.flat",
-        "source": "com.example.androidbluetoothchat.app-main-26:/layout/activity_guidelines.xml"
     },
     {
         "merged": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-merged_res-24:/mipmap-hdpi_plus_round.webp.flat",
