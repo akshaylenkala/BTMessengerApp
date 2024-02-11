@@ -16,7 +16,7 @@
         android:layout_below="@id/tv_text"
         android:layout_width="match_parent"
         android:layout_marginBottom="60dp"
-        tools:ignore="NotSibling" />
+        tools:ignore="NotSibling,ObsoleteLayoutParam" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,34 +33,39 @@
             android:background="@drawable/rounded_edittext_background"
             android:layout_marginBottom="20dp"
             android:layout_marginHorizontal="6dp"
-            tools:ignore="UselessParent">
+            tools:ignore="ObsoleteLayoutParam,UselessParent">
+
             <ImageButton
                 android:id="@+id/btn_select_image"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:background="@drawable/rounded_edittext_background"
+                android:scaleType="centerCrop"
                 android:src="@drawable/plus_foreground"
-                android:scaleType="centerCrop"/>
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
             <EditText
                 android:id="@+id/ed_enter_message"
                 android:layout_width="307dp"
                 android:layout_height="25dp"
                 android:layout_weight="10"
                 android:background="@drawable/rounded_edittext_background"
-                android:hint=" Type your message"
-                android:textSize="15dp"
                 android:cursorVisible="true"
+                android:hint=" Type your message"
+                android:textColor="@color/black"
                 android:textColorHint="@color/dark_grey"
-                android:textColor="@color/black" />
+                android:textSize="15dp"
+                tools:ignore="Autofill,HardcodedText,InefficientWeight,SpUsage,TextFields,TextSizeCheck,TouchTargetSizeCheck" />
+
             <ImageButton
                 android:id="@+id/btn_send_msg"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:background="@drawable/rounded_edittext_background"
-                android:src="@drawable/send_foreground"
-                android:scaleType="centerCrop"
                 android:backgroundTint="@color/white"
-                />
+                android:scaleType="centerCrop"
+                android:src="@drawable/send_foreground"
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
