@@ -26,6 +26,9 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 /** @noinspection ALL*/
 public class MainActivity extends AppCompatActivity {
@@ -134,6 +137,9 @@ public class MainActivity extends AppCompatActivity {
         btnSendMessage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                SimpleDateFormat dateFormat=new SimpleDateFormat("hh:mm a", Locale.getDefault());
+                Date now=new Date();
+                String ti=dateFormat.format(now);
                 String message = edCreateMessage.getText().toString();
                 if (!message.isEmpty()) {
                     if(!connectedDevice.isEmpty())
