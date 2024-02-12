@@ -207,10 +207,11 @@ public class ChatUtils {
             outputStream = tmpOut;
         }
         public void run() {
-            byte[] buffer = new byte[1024];
-            int bytes;
+
             while (true) {
                 try {
+                    byte[] buffer = new byte[1024];
+                    int bytes;
                     bytes = inputStream.read(buffer);
                     String timestamp=getCurrentTimestamp();
                     handler.obtainMessage(MainActivity.MESSAGE_READ, bytes, -1, new MessageData(buffer,connectedDevice,timestamp)).sendToTarget();
