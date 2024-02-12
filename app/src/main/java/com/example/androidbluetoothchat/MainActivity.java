@@ -88,7 +88,10 @@ public class MainActivity extends AppCompatActivity {
                 case MESSAGE_WRITE:
                     byte[] buffer1 = (byte[]) message.obj;
                     String outputBuffer = new String(buffer1);
-                    adapterMainChat.add("Me: " + outputBuffer);
+                    SimpleDateFormat dateFormat=new SimpleDateFormat("hh:mm a", Locale.getDefault());
+                    Date now=new Date();
+                    String ti=dateFormat.format(now);
+                    adapterMainChat.add("Me: " + outputBuffer+"\n"+ti);
                     break;
                 case MESSAGE_DEVICE_NAME:
                     connectedDevice = message.getData().getString(DEVICE_NAME);
@@ -137,9 +140,6 @@ public class MainActivity extends AppCompatActivity {
         btnSendMessage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SimpleDateFormat dateFormat=new SimpleDateFormat("hh:mm a", Locale.getDefault());
-                Date now=new Date();
-                String ti=dateFormat.format(now);
                 String message = edCreateMessage.getText().toString();
                 if (!message.isEmpty()) {
                     if(!connectedDevice.isEmpty())
