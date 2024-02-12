@@ -32,14 +32,19 @@
             android:name="com.example.androidbluetoothchat.DeviceListActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.androidbluetoothchat.MainActivity"
+            android:name="com.example.androidbluetoothchat.SplashActivity"
             android:exported="true"
-            android:windowSoftInputMode="stateVisible" >
+            android:theme="@style/Theme.AppCompat.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.androidbluetoothchat.MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="stateVisible" >
         </activity>
         <activity
             android:name="com.example.androidbluetoothchat.GuidelinesActivity"

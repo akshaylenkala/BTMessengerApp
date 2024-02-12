@@ -8,10 +8,6 @@
         "source": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-main-26:/drawable/send_foreground.xml"
     },
     {
-        "merged": "com.example.androidbluetoothchat.app-merged_res-24:/layout_message_layout.xml.flat",
-        "source": "com.example.androidbluetoothchat.app-main-26:/layout/message_layout.xml"
-    },
-    {
         "merged": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-merged_res-24:/drawable_blueback.png.flat",
         "source": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-main-26:/drawable/blueback.png"
     },
@@ -96,6 +92,10 @@
         "source": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-main-26:/mipmap-xxxhdpi/send.webp"
     },
     {
+        "merged": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-merged_res-24:/raw_splashup.mp4.flat",
+        "source": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-main-26:/raw/splashup.mp4"
+    },
+    {
         "merged": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-merged_res-24:/raw_sent_sound.mp3.flat",
         "source": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-main-26:/raw/sent_sound.mp3"
     },
@@ -106,6 +106,10 @@
     {
         "merged": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-merged_res-24:/mipmap-anydpi-v26_plus_round.xml.flat",
         "source": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-main-26:/mipmap-anydpi-v26/plus_round.xml"
+    },
+    {
+        "merged": "com.example.androidbluetoothchat.app-merged_res-24:/raw_splashup.mp4.flat",
+        "source": "com.example.androidbluetoothchat.app-main-26:/raw/splashup.mp4"
     },
     {
         "merged": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-merged_res-24:/mipmap-xxxhdpi_plus_round.webp.flat",
@@ -160,6 +164,10 @@
         "source": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-main-26:/mipmap-mdpi/plus.webp"
     },
     {
+        "merged": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-merged_res-24:/layout_activity_splash.xml.flat",
+        "source": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-main-26:/layout/activity_splash.xml"
+    },
+    {
         "merged": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-merged_res-24:/mipmap-anydpi-v26_send.xml.flat",
         "source": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-main-26:/mipmap-anydpi-v26/send.xml"
     },
@@ -194,6 +202,10 @@
     {
         "merged": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-merged_res-24:/mipmap-hdpi_ic_launcher.webp.flat",
         "source": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-main-26:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-merged_res-24:/raw_splash.mp4.flat",
+        "source": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-main-26:/raw/splash.mp4"
     },
     {
         "merged": "/home/ak/.gradle/daemon/8.2/com.example.androidbluetoothchat.app-merged_res-24:/layout_activity_device_list.xml.flat",

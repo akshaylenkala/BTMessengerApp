@@ -1,6 +1,8 @@
 package com.example.androidbluetoothchat;
 import android.Manifest;
 import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothSocket;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -16,6 +18,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -26,9 +29,12 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+import java.util.UUID;
 
 /** @noinspection ALL*/
 public class MainActivity extends AppCompatActivity {
@@ -57,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
     private MediaPlayer mediaPlayer;
     private MediaPlayer rmediaplayer;
     private MediaPlayer pairedsound;
+    private ImageView bgimg;
     private Handler handler = new Handler(new Handler.Callback() {
         @Override
         public boolean handleMessage(Message message) {
@@ -114,6 +121,8 @@ public class MainActivity extends AppCompatActivity {
         mediaPlayer = MediaPlayer.create(this, R.raw.sent_sound);
         rmediaplayer = MediaPlayer.create(this, R.raw.rec_sound);
         pairedsound = MediaPlayer.create(this, R.raw.paired);
+        bgimg=findViewById(R.id.background_image);
+        bgimg.setImageResource(R.drawable.starrysky3);
         context = this;
         init();
         initBluetooth();
@@ -230,6 +239,45 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Please connect to a device first", Toast.LENGTH_SHORT).show();
         }
     }
+//private void initiateBluetoothFileTransfer(Uri fileUri) {
+//    if (connectedDeviceAddress != null && !connectedDeviceAddress.isEmpty()) {
+//        BluetoothDevice device = BluetoothAdapter.getDefaultAdapter().getRemoteDevice(connectedDeviceAddress);
+//        BluetoothSocket socket = null;
+//        try {
+//            socket = device.createRfcommSocketToServiceRecord(UUID.fromString("00001101-0000-1000-8000-00805F9B34FB"));
+//            socket.connect();
+//
+//            OutputStream outputStream = socket.getOutputStream();
+//            InputStream inputStream = getContentResolver().openInputStream(fileUri);
+//
+//            byte[] buffer = new byte[1024];
+//            int bytesRead;
+//            while ((bytesRead = inputStream.read(buffer)) != -1) {
+//                outputStream.write(buffer, 0, bytesRead);
+//            }
+//
+//            inputStream.close();
+//            outputStream.close();
+//            socket.close();
+//
+//            Toast.makeText(this, "File transfer successful", Toast.LENGTH_SHORT).show();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//            Toast.makeText(this, "Error occurred during file transfer", Toast.LENGTH_SHORT).show();
+//        } finally {
+//            if (socket != null) {
+//                try {
+//                    socket.close();
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
+//    } else {
+//        Toast.makeText(this, "Please connect to a device first", Toast.LENGTH_SHORT).show();
+//    }
+//}
+
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         if (requestCode == LOCATION_PERMISSION_REQUEST) {
@@ -304,6 +352,7 @@ public class MainActivity extends AppCompatActivity {
                 rmediaplayer.stop();
                 rmediaplayer.prepare(); // Prepare MediaPlayer for playback (reset state)
                 rmediaplayer.start(); // Start playback
+                playanimation();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -320,4 +369,8 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 }
+    private void playanimation() {
+        // Get the original Bitmap from the ImageView
+
+    }
 }

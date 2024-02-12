@@ -2618,6 +2618,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id background_image
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3007,6 +3008,7 @@ id unlabeled
 id up
 id useLogo
 id vertical_only
+id videoView
 id view_offset_helper
 id view_transition
 id view_tree_lifecycle_owner
@@ -3111,6 +3113,7 @@ layout abc_tooltip
 layout activity_device_list
 layout activity_guidelines
 layout activity_main
+layout activity_splash
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3214,6 +3217,7 @@ plurals mtrl_badge_content_description
 raw paired
 raw rec_sound
 raw sent_sound
+raw splashup
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

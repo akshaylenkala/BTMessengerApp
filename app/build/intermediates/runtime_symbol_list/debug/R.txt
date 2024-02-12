@@ -2617,6 +2617,7 @@ int id auto 0x7f080054
 int id autoComplete 0x7f080055
 int id autoCompleteToEnd 0x7f080056
 int id autoCompleteToStart 0x7f080057
+int id background_image 0x7f0801ed
 int id barrier 0x7f080058
 int id baseline 0x7f080059
 int id beginOnFirstDraw 0x7f08005a
@@ -3006,6 +3007,7 @@ int id unlabeled 0x7f0801d9
 int id up 0x7f0801da
 int id useLogo 0x7f0801db
 int id vertical_only 0x7f0801dc
+int id videoView 0x7f0801ee
 int id view_offset_helper 0x7f0801dd
 int id view_transition 0x7f0801de
 int id view_tree_lifecycle_owner 0x7f0801df
@@ -3110,6 +3112,7 @@ int layout abc_tooltip 0x7f0b001b
 int layout activity_device_list 0x7f0b001c
 int layout activity_guidelines 0x7f0b001d
 int layout activity_main 0x7f0b001e
+int layout activity_splash 0x7f0b0078
 int layout custom_dialog 0x7f0b001f
 int layout design_bottom_navigation_item 0x7f0b0020
 int layout design_bottom_sheet_dialog 0x7f0b0021
@@ -3213,6 +3216,7 @@ int plurals mtrl_badge_content_description 0x7f0e0000
 int raw paired 0x7f0f0000
 int raw rec_sound 0x7f0f0001
 int raw sent_sound 0x7f0f0002
+int raw splashup 0x7f0f0004
 int string abc_action_bar_home_description 0x7f100000
 int string abc_action_bar_up_description 0x7f100001
 int string abc_action_menu_overflow_description 0x7f100002
