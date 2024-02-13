@@ -6,6 +6,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -15,6 +17,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -26,12 +29,10 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
-
 /** @noinspection ALL*/
 public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_DEVICE_ADDRESS = "device_address" ;
@@ -60,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
     private MediaPlayer rmediaplayer;
     private MediaPlayer pairedsound;
     private ImageView bgimg;
+    private static final int PICK_IMAGE_REQUEST = 1;
+    private Button changebgbutton;
     private Handler handler = new Handler(new Handler.Callback() {
         @Override
         public boolean handleMessage(Message message) {
@@ -119,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
         pairedsound = MediaPlayer.create(this, R.raw.paired);
         bgimg=findViewById(R.id.background_image);
         bgimg.setImageResource(R.drawable.starrysky3);
+        changebgbutton=findViewById(R.id.change_bgimg);
         context = this;
         init();
         initBluetooth();
@@ -178,6 +182,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
+            case R.id.change_bgimg:
+                changebgimg();
+                return true;
             case R.id.menu_search_devices:
                 checkPermissions();
                 return true;
@@ -186,6 +193,9 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.action_guidelines:
                 openGuidelinesActivity();
+                return true;
+            case R.id.reset_bgimg:
+                resetBackgroundImage();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -215,6 +225,15 @@ public class MainActivity extends AppCompatActivity {
             String address = data.getStringExtra("deviceAddress");
             connectedDeviceAddress = address;
             chatUtils.connect(bluetoothAdapter.getRemoteDevice(address));
+        }
+        else if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
+            Uri uri = data.getData();
+            try {
+                Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(uri));
+                bgimg.setImageBitmap(bitmap);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
     private void sendSelectedFile(Uri selectedFileUri) {
@@ -307,8 +326,8 @@ public class MainActivity extends AppCompatActivity {
         if (rmediaplayer != null) {
             try {
                 rmediaplayer.stop();
-                rmediaplayer.prepare(); // Prepare MediaPlayer for playback (reset state)
-                rmediaplayer.start(); // Start playback
+                rmediaplayer.prepare();
+                rmediaplayer.start();
                 playanimation();
             } catch (IOException e) {
                 e.printStackTrace();
@@ -319,15 +338,29 @@ public class MainActivity extends AppCompatActivity {
         if (pairedsound != null) {
             try {
                 pairedsound.stop();
-                pairedsound.prepare(); // Prepare MediaPlayer for playback (reset state)
-                pairedsound.start(); // Start playback
+                pairedsound.prepare();
+                pairedsound.start();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
 }
     private void playanimation() {
-        // Get the original Bitmap from the ImageView
-
     }
+    private void openGallery() {
+        Intent intent = new Intent();
+        intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST);
+    }
+    private void changebgimg() {
+        Intent intent = new Intent();
+        intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST);
+    }
+    private void resetBackgroundImage() {
+        bgimg.setImageResource(R.drawable.starrysky3);
+    }
+
 }

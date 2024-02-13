@@ -1,22 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
+    <item
+        android:id="@+id/change_bgimg"
+        app:showAsAction="always"
+        android:icon="@mipmap/bgchange"
+        android:title="change image background"/>
     <item
         android:id="@+id/menu_search_devices"
         app:showAsAction="always"
         android:icon="@drawable/ic_baseline_person_add"
         android:title="Search Devices" />
-
     <item
         android:id="@+id/menu_enable_bluetooth"
         app:showAsAction="always"
         android:icon="@drawable/ic_baseline_bluetooth_24"
         android:title="Switch On Devices" />
     <item
+        android:id="@+id/reset_bgimg"
+        android:title="Reset"/>
+    <item
         android:id="@+id/action_guidelines"
         android:icon="@drawable/ic_guidelines"
         android:title="Guidelines"
-        app:showAsAction="always" />
+        />
+
 
 </menu>
