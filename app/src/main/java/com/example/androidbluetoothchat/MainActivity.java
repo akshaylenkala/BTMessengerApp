@@ -6,7 +6,6 @@ import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -125,7 +124,6 @@ public class MainActivity extends AppCompatActivity {
         pairedsound = MediaPlayer.create(this, R.raw.paired);
         bgimg=findViewById(R.id.background_image);
         bgimg.setImageResource(R.drawable.starrysky3);
-        loadBackgroundImage();
         context = this;
         init();
         initBluetooth();
@@ -337,7 +335,6 @@ public class MainActivity extends AppCompatActivity {
                 rmediaplayer.stop();
                 rmediaplayer.prepare();
                 rmediaplayer.start();
-                playanimation();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -354,8 +351,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 }
-    private void playanimation() {
-    }
     private void changebgimg() {
         Intent intent = new Intent();
         intent.setType("image/*");
@@ -364,25 +359,6 @@ public class MainActivity extends AppCompatActivity {
     }
     private void resetBackgroundImage() {
         bgimg.setImageResource(R.drawable.starrysky3);
-    }
-    private void loadBackgroundImage() {
-        SharedPreferences preferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
-        String backgroundImageUri = preferences.getString(PREF_BACKGROUND_IMAGE_URI, null);
-        if (backgroundImageUri != null) {
-            Uri uri = Uri.parse(backgroundImageUri);
-            try {
-                Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(uri));
-                bgimg.setImageBitmap(bitmap);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-    private void saveBackgroundImageUri(Uri uri) {
-        SharedPreferences preferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.putString(PREF_BACKGROUND_IMAGE_URI, uri.toString());
-        editor.apply();
     }
 
 }
