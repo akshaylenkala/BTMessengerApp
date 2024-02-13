@@ -33,6 +33,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+import android.os.Vibrator;
 /**@noinspection ALL*/
 
 public class MainActivity extends AppCompatActivity {
@@ -64,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView bgimg;
     private static final int PICK_IMAGE_REQUEST = 1;
     private static final String PREF_BACKGROUND_IMAGE_URI = "pref_background_image_uri";
+    private Vibrator vibrator;
     private Handler handler = new Handler(new Handler.Callback() {
         @Override
         public boolean handleMessage(Message message) {
@@ -122,6 +124,7 @@ public class MainActivity extends AppCompatActivity {
         mediaPlayer = MediaPlayer.create(this, R.raw.sent_sound);
         rmediaplayer = MediaPlayer.create(this, R.raw.rec_sound);
         pairedsound = MediaPlayer.create(this, R.raw.paired);
+        vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         bgimg=findViewById(R.id.background_image);
         bgimg.setImageResource(R.drawable.starrysky3);
         context = this;
@@ -330,14 +333,20 @@ public class MainActivity extends AppCompatActivity {
         listMainChat.smoothScrollToPosition(adapterMainChat.getCount() - 1);
     }
     private void playReceivedMessageSound() {
+        if (vibrator != null) {
+            // Vibrate for 500 milliseconds
+            vibrator.vibrate(500);
+        }
         if (rmediaplayer != null) {
             try {
                 rmediaplayer.stop();
                 rmediaplayer.prepare();
                 rmediaplayer.start();
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
+
         }
     }
     private void playDeviceConnectedSound() {
@@ -360,5 +369,4 @@ public class MainActivity extends AppCompatActivity {
     private void resetBackgroundImage() {
         bgimg.setImageResource(R.drawable.starrysky3);
     }
-
 }
