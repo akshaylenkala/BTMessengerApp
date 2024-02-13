@@ -1,8 +1,7 @@
 package com.example.androidbluetoothchat;
+
 import android.Manifest;
 import android.bluetooth.BluetoothAdapter;
-import android.bluetooth.BluetoothDevice;
-import android.bluetooth.BluetoothSocket;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -29,12 +28,9 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
-import java.util.UUID;
 
 /** @noinspection ALL*/
 public class MainActivity extends AppCompatActivity {
@@ -239,45 +235,6 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Please connect to a device first", Toast.LENGTH_SHORT).show();
         }
     }
-//private void initiateBluetoothFileTransfer(Uri fileUri) {
-//    if (connectedDeviceAddress != null && !connectedDeviceAddress.isEmpty()) {
-//        BluetoothDevice device = BluetoothAdapter.getDefaultAdapter().getRemoteDevice(connectedDeviceAddress);
-//        BluetoothSocket socket = null;
-//        try {
-//            socket = device.createRfcommSocketToServiceRecord(UUID.fromString("00001101-0000-1000-8000-00805F9B34FB"));
-//            socket.connect();
-//
-//            OutputStream outputStream = socket.getOutputStream();
-//            InputStream inputStream = getContentResolver().openInputStream(fileUri);
-//
-//            byte[] buffer = new byte[1024];
-//            int bytesRead;
-//            while ((bytesRead = inputStream.read(buffer)) != -1) {
-//                outputStream.write(buffer, 0, bytesRead);
-//            }
-//
-//            inputStream.close();
-//            outputStream.close();
-//            socket.close();
-//
-//            Toast.makeText(this, "File transfer successful", Toast.LENGTH_SHORT).show();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//            Toast.makeText(this, "Error occurred during file transfer", Toast.LENGTH_SHORT).show();
-//        } finally {
-//            if (socket != null) {
-//                try {
-//                    socket.close();
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        }
-//    } else {
-//        Toast.makeText(this, "Please connect to a device first", Toast.LENGTH_SHORT).show();
-//    }
-//}
-
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         if (requestCode == LOCATION_PERMISSION_REQUEST) {

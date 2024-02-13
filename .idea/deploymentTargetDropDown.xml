@@ -23,16 +23,7 @@
               <deviceKey>
                 <Key>
                   <type value="SERIAL_NUMBER" />
-                  <value value="192.168.2.4:5555" />
-                </Key>
-              </deviceKey>
-            </Target>
-            <Target>
-              <type value="RUNNING_DEVICE_TARGET" />
-              <deviceKey>
-                <Key>
-                  <type value="SERIAL_NUMBER" />
-                  <value value="emulator-5554" />
+                  <value value="R9PR30VG5VJ" />
                 </Key>
               </deviceKey>
             </Target>
