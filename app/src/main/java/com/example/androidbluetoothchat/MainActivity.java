@@ -153,6 +153,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String message = edCreateMessage.getText().toString();
+                if(connectedDevice==null)
+                {
+                    Toast.makeText(context, "Please connect to device first", Toast.LENGTH_SHORT).show();
+                }
                 if (!message.isEmpty()) {
                     if(connectedDevice != null && !connectedDevice.isEmpty()) {
                         mediaPlayer.start();
