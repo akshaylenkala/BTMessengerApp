@@ -1,6 +1,7 @@
 package com.example.androidbluetoothchat;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -18,7 +19,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -34,6 +34,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+/**@noinspection ALL*/
 
 public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_DEVICE_ADDRESS = "device_address" ;
@@ -63,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
     private MediaPlayer pairedsound;
     private ImageView bgimg;
     private static final int PICK_IMAGE_REQUEST = 1;
-    private Button changebgbutton;
     private static final String PREF_BACKGROUND_IMAGE_URI = "pref_background_image_uri";
     private Handler handler = new Handler(new Handler.Callback() {
         @Override
@@ -115,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
     private void setState(CharSequence subTitle) {
         getSupportActionBar().setSubtitle(subTitle);
     }
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -124,7 +125,6 @@ public class MainActivity extends AppCompatActivity {
         pairedsound = MediaPlayer.create(this, R.raw.paired);
         bgimg=findViewById(R.id.background_image);
         bgimg.setImageResource(R.drawable.starrysky3);
-        changebgbutton=findViewById(R.id.change_bgimg);
         loadBackgroundImage();
         context = this;
         init();
@@ -183,6 +183,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this, "No Bluetooth Found", Toast.LENGTH_SHORT).show();
         }
     }
+    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
@@ -350,12 +351,6 @@ public class MainActivity extends AppCompatActivity {
         }
 }
     private void playanimation() {
-    }
-    private void openGallery() {
-        Intent intent = new Intent();
-        intent.setType("image/*");
-        intent.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST);
     }
     private void changebgimg() {
         Intent intent = new Intent();
