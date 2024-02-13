@@ -1211,6 +1211,7 @@ color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
 color background_material_light
+color bbgchange
 color black
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
@@ -2643,6 +2644,7 @@ id center_vertical
 id chain
 id chain2
 id chains
+id change_bgimg
 id checkbox
 id checked
 id chip
@@ -2879,6 +2881,7 @@ id progress_scan_devices
 id radio
 id ratio
 id rectangles
+id reset_bgimg
 id reverseSawtooth
 id right
 id rightToLeft
@@ -3207,6 +3210,9 @@ menu example_menu
 menu example_menu2
 menu menu_device_list
 menu menu_main_activity
+mipmap bgchange
+mipmap bgchange_round
+mipmap fbgchange
 mipmap ic_launcher
 mipmap ic_launcher_round
 mipmap plus

@@ -5,6 +5,7 @@ import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -33,7 +34,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
-/** @noinspection ALL*/
+
 public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_DEVICE_ADDRESS = "device_address" ;
     private Context context;
@@ -63,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView bgimg;
     private static final int PICK_IMAGE_REQUEST = 1;
     private Button changebgbutton;
+    private static final String PREF_BACKGROUND_IMAGE_URI = "pref_background_image_uri";
     private Handler handler = new Handler(new Handler.Callback() {
         @Override
         public boolean handleMessage(Message message) {
@@ -123,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
         bgimg=findViewById(R.id.background_image);
         bgimg.setImageResource(R.drawable.starrysky3);
         changebgbutton=findViewById(R.id.change_bgimg);
+        loadBackgroundImage();
         context = this;
         init();
         initBluetooth();
@@ -151,8 +154,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String message = edCreateMessage.getText().toString();
                 if (!message.isEmpty()) {
-                    if(!connectedDevice.isEmpty())
-                    {mediaPlayer.start();}
+                    if(connectedDevice != null && !connectedDevice.isEmpty()) {
+                        mediaPlayer.start();
+                    }
                     edCreateMessage.setText("");
                     chatUtils.write(message.getBytes());
                 } else if (selectedFileUri != null) {
@@ -361,6 +365,25 @@ public class MainActivity extends AppCompatActivity {
     }
     private void resetBackgroundImage() {
         bgimg.setImageResource(R.drawable.starrysky3);
+    }
+    private void loadBackgroundImage() {
+        SharedPreferences preferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+        String backgroundImageUri = preferences.getString(PREF_BACKGROUND_IMAGE_URI, null);
+        if (backgroundImageUri != null) {
+            Uri uri = Uri.parse(backgroundImageUri);
+            try {
+                Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(uri));
+                bgimg.setImageBitmap(bitmap);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    private void saveBackgroundImageUri(Uri uri) {
+        SharedPreferences preferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString(PREF_BACKGROUND_IMAGE_URI, uri.toString());
+        editor.apply();
     }
 
 }
